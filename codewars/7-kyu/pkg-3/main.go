@@ -8,6 +8,12 @@ func GrowingPlant(upSpeed, downSpeed, desiredHeight int) int {
 
 	for heightPlant < desiredHeight {
 		heightPlant += upSpeed
+
+		if heightPlant >= desiredHeight {
+			days++
+			return days
+		}
+
 		heightPlant -= downSpeed
 		days++
 	}
